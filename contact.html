@@ -1,0 +1,256 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>TOPICO - Ecommerce website</title>
+    <link rel="icon" href="images/icon.webp" type="image/x-icon" />
+
+    <!-- link to file css -->
+    <link rel="stylesheet" href="css/style.css" />
+
+    <!-- font awesome -->
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css"
+    />
+  </head>
+  <body>
+    <header>
+      <div class="container top-nav">
+        <a href="index.html" class="logo"
+          ><img src="images/logo-black.png" alt=""
+        /></a>
+        <form action="" class="search">
+          <input type="search" placeholder="Search for products..." />
+          <button type="submit">Search</button>
+        </form>
+
+        <div class="cart_header">
+          <div onclick="open_wishlist()" class="icon_cart">
+            <i class="fa-solid fa-heart"></i>
+            <span class="count_items_wishlist">0</span>
+          </div>
+          <div onclick="open_cart()" class="icon_cart">
+            <i class="fa-solid fa-bag-shopping"></i>
+            <span class="count_items">0</span>
+          </div>
+          <div class="total_price">
+            <p>My Cart:</p>
+            <p class="price_cart_head">$0</p>
+          </div>
+        </div>
+      </div>
+
+      <nav>
+        <div class="links container">
+          <i onclick="open_menu()" class="fa-solid fa-bars btn_open_menu"></i>
+
+          <ul id="menu">
+            <span onclick="close_menu()" class="bg_overlay"></span>
+            <i
+              onclick="close_menu()"
+              class="fa-solid fa-circle-xmark btn_close_menu"
+            ></i>
+            <img class="logo_menu" src="images/logo-black.png" alt="" />
+
+            <li><a href="index.html">home</a></li>
+            <li><a href="all_products.html">all products</a></li>
+            <li><a href="aboutus.html">about us</a></li>
+            <li class="active"><a href="contact.html">contact</a></li>
+          </ul>
+
+          <div class="login_signup">
+            <a href="login.html"
+              >login <i class="fa-solid fa-right-to-bracket"></i
+            ></a>
+            <a href="signup.html"
+              >sign up <i class="fa-solid fa-user-plus"></i
+            ></a>
+          </div>
+        </div>
+      </nav>
+    </header>
+
+    <div class="cart">
+      <div class="top_cart">
+        <h3>My cart <span class="count_item_cart">(0 items in cart)</span></h3>
+        <span onclick="close_cart()" class="close_cart"
+          ><i class="fa-regular fa-circle-xmark"></i
+        ></span>
+      </div>
+
+      <div class="items_in_cart"></div>
+
+      <div class="bottom_cart">
+        <div class="total">
+          <p>Cart subtotal</p>
+          <p class="price_cart_total">$0</p>
+        </div>
+
+        <div class="button_cart">
+          <a href="checkout.html" class="btn_cart">Proceed to checkout</a>
+          <button onclick="close_cart()" class="btn_cart trans_bg">Shop more</button>
+        </div>
+      </div>
+    </div>
+
+    <div class="wishlist">
+      <div class="top_wishlist">
+        <h3>
+          My wishlist
+          <span class="count_item_wishlist">(0 items in wishlist)</span>
+        </h3>
+        <span onclick="close_wishlist()" class="close_wishlist"
+          ><i class="fa-regular fa-circle-xmark"></i
+        ></span>
+      </div>
+
+      <div class="items_in_wishlist"></div>
+
+      <div class="bottom_wishlist">
+        <div class="button_wishlist">
+          <a href="#" onclick="clearWishlist()" class="btn_wishlist"
+            >clear wishlist</a
+          >
+          <button class="btn_wishlist trans_bg">Shop more</button>
+        </div>
+      </div>
+    </div>
+
+    <section class="sec_contact">
+      <div class="container">
+        <div class="top_sec_contact">
+          <h1>Contact Us</h1>
+          <p>
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Eos
+            consectetur inventore voluptas eius qui nulla quia sequi unde harum
+            excepturi!
+          </p>
+        </div>
+
+        <div class="body_sec_contact">
+          <div class="info_contact">
+            <div class="info">
+              <span><i class="fa-solid fa-location-dot"></i></span>
+              <div class="content">
+                <h4>Address</h4>
+                <p>838 Broadway, New York, NY 10003, USA</p>
+              </div>
+            </div>
+
+            <div class="info">
+                <span><i class="fa-solid fa-phone"></i></span>
+                <div class="content">
+                  <h4>Phone</h4>
+                  <p>+212 123 456 789</p>
+                </div>
+            </div>
+
+              <div class="info">
+                <span><i class="fa-regular fa-envelope"></i></span>
+                <div class="content">
+                  <h4>Email</h4>
+                  <p>contact@topico.com</p>
+                </div>
+            </div>
+          </div>
+
+          <form action="#" class="form_contact">
+            <h3>send message</h3>
+
+            <label for="name">full name</label>
+            <input type="text" id="name">
+
+            <label for="email">email</label>
+            <input type="text" id="email">
+
+            <label for="message">your message</label>
+            <textarea id="message" cols="30" rows="10"></textarea>
+
+            <button>Send</button>
+          </form>
+        </div>
+      </div>
+    </section>
+
+    <footer>
+      <div class="container">
+        <div class="big_row">
+          <a href="index.html"><img src="images/logo-white.png" alt="" /></a>
+
+          <div class="hotline">
+            <i class="fa-solid fa-headset"></i>
+            <div class="text">
+              <h5>hotline free 24/24:</h5>
+              <h6>(+212) 123 456 789</h6>
+            </div>
+          </div>
+
+          <p>
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Ex, vitae!
+          </p>
+        </div>
+
+        <div class="row">
+          <h4>FAQs & Help</h4>
+
+          <div class="links">
+            <a href="#">F.A.Q.'s</a>
+            <a href="#">Ordering Tracking</a>
+            <a href="#">Contacts</a>
+            <a href="#">Events</a>
+            <a href="#">Help Center</a>
+          </div>
+        </div>
+
+        <div class="row">
+          <h4>Shipping & Delivery</h4>
+
+          <div class="links">
+            <a href="#">Delivery Information</a>
+            <a href="#">Discount</a>
+            <a href="#">Payment & Shipping</a>
+            <a href="#">Estimated Delivery Time</a>
+            <a href="#">Shipping Guide</a>
+          </div>
+        </div>
+
+        <div class="row">
+          <h4>Information</h4>
+
+          <div class="links">
+            <a href="#">Popular</a>
+            <a href="#">Our Services</a>
+            <a href="#">Your Account</a>
+            <a href="#">Privacy Policy</a>
+            <a href="#">Terms & Condition</a>
+          </div>
+        </div>
+      </div>
+
+      <div class="bottom_footer">
+        <div class="container">
+          <p>
+            Copyright &copy; <span>Topico.</span> By
+            <a
+              href="https://www.linkedin.com/in/yassine-chmarekh/"
+              target="_blank"
+              >Yassine_ChM</a
+            >
+          </p>
+
+          <div class="payement_img">
+            <img src="images/payment-1.png" alt="" />
+            <img src="images/payment-2.png" alt="" />
+            <img src="images/payment-3.png" alt="" />
+            <img src="images/payment-4.png" alt="" />
+          </div>
+        </div>
+      </div>
+    </footer>
+
+    <!-- link to file js -->
+    <script src="js/main.js"></script>
+  </body>
+</html>

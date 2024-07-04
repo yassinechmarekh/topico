@@ -1,0 +1,358 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>TOPICO - Ecommerce website</title>
+    <link rel="icon" href="images/icon.webp" type="image/x-icon">
+
+    <!-- link to file css -->
+    <link rel="stylesheet" href="css/style.css" />
+
+    <!-- font awesome -->
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css"
+    />
+  </head>
+  <body>
+    <header>
+      <div class="container top-nav">
+        <a href="index.html" class="logo"><img src="images/logo-black.png" alt="" /></a>
+        <form action="" class="search">
+          <input type="search" placeholder="Search for products..." />
+          <button type="submit">Search</button>
+        </form>
+
+        <div class="cart_header">
+          <div onclick="open_wishlist()" class="icon_cart">
+            <i class="fa-solid fa-heart"></i>
+            <span class="count_items_wishlist">0</span>
+          </div>
+          <div onclick="open_cart()" class="icon_cart">
+            <i class="fa-solid fa-bag-shopping"></i>
+            <span class="count_items">0</span>
+          </div>
+          <div class="total_price">
+            <p>My Cart:</p>
+            <p class="price_cart_head">$0</p>
+          </div>
+        </div>
+      </div>
+
+      <nav>
+        <div class="links container">
+          <i onclick="open_menu()" class="fa-solid fa-bars btn_open_menu"></i>
+
+          <ul id="menu">
+            <span onclick="close_menu()" class="bg_overlay"></span>
+            <i
+              onclick="close_menu()"
+              class="fa-solid fa-circle-xmark btn_close_menu"
+            ></i>
+            <img class="logo_menu" src="images/logo-black.png" alt="" />
+
+            <li><a href="index.html">home</a></li>
+            <li class="active"><a href="all_products.html">all products</a></li>
+            <li><a href="aboutus.html">about us</a></li>
+            <li><a href="contact.html">contact</a></li>
+          </ul>
+
+          <div class="login_signup">
+            <a href="login.html">login <i class="fa-solid fa-right-to-bracket"></i></a>
+            <a href="signup.html">sign up <i class="fa-solid fa-user-plus"></i></a>
+          </div>
+        </div>
+      </nav>
+    </header>
+
+    <div class="cart">
+      <div class="top_cart">
+        <h3>My cart <span class="count_item_cart">(0 items in cart)</span></h3>
+        <span onclick="close_cart()" class="close_cart"
+          ><i class="fa-regular fa-circle-xmark"></i
+        ></span>
+      </div>
+
+      <div class="items_in_cart"></div>
+
+      <div class="bottom_cart">
+        <div class="total">
+          <p>Cart subtotal</p>
+          <p class="price_cart_total">$0</p>
+        </div>
+
+        <div class="button_cart">
+          <a href="checkout.html" class="btn_cart">Proceed to checkout</a>
+          <button onclick="close_cart()" class="btn_cart trans_bg">Shop more</button>
+        </div>
+      </div>
+    </div>
+
+    <div class="wishlist">
+      <div class="top_wishlist">
+        <h3>
+          My wishlist
+          <span class="count_item_wishlist">(0 items in wishlist)</span>
+        </h3>
+        <span onclick="close_wishlist()" class="close_wishlist"
+          ><i class="fa-regular fa-circle-xmark"></i
+        ></span>
+      </div>
+
+      <div class="items_in_wishlist"></div>
+
+      <div class="bottom_wishlist">
+        <div class="button_wishlist">
+          <a href="#" onclick="clearWishlist()" class="btn_wishlist"
+            >clear wishlist</a
+          >
+          <button class="btn_wishlist trans_bg">Shop more</button>
+        </div>
+      </div>
+    </div>
+
+    <div class="top_page">
+      <div class="container">
+        <h1>Experience the Future of Technology with Our Topico.</h1>
+        <p>
+          Find everything you need to transform your home into a smart,
+          connected space. Our Topico store offers a wide range of devices to
+          fit your needs
+        </p>
+      </div>
+    </div>
+
+    <section class="all_products">
+      <div class="container">
+        <span class="btn_filter" onclick="open_close_filter()">
+          filter <i class="fa-solid fa-filter"></i>
+        </span>
+
+
+        <div class="filter">
+          <h2>Filter</h2>
+
+          <div class="filter_item">
+            <h4>categorie</h4>
+            <div class="content">
+              <div class="item">
+                <span for="phones">Phones</span>
+                <input type="checkbox" id="phones" />
+              </div>
+
+              <div class="item">
+                <span for="tablets">Tablets</span>
+                <input type="checkbox" id="tablets" />
+              </div>
+
+              <div class="item">
+                <span for="electronics">Electronics</span>
+                <input type="checkbox" id="electronics" />
+              </div>
+
+              <div class="item">
+                <span for="tv">TV</span>
+                <input type="checkbox" id="tv" />
+              </div>
+
+              <div class="item">
+                <span for="fashion">Fashion</span>
+                <input type="checkbox" id="fashion" />
+              </div>
+
+              <div class="item">
+                <span for="watches">Watches</span>
+                <input type="checkbox" id="watches" />
+              </div>
+            </div>
+          </div>
+
+          <div class="filter_item">
+            <h4>Brand</h4>
+            <div class="content">
+              <div class="item">
+                <span for="apple">apple</span>
+                <input type="checkbox" id="apple" />
+              </div>
+
+              <div class="item">
+                <span for="samsung">samsung</span>
+                <input type="checkbox" id="samsung" />
+              </div>
+
+              <div class="item">
+                <span for="intel">intel</span>
+                <input type="checkbox" id="intel" />
+              </div>
+
+              <div class="item">
+                <span for="oppo">oppo</span>
+                <input type="checkbox" id="oppo" />
+              </div>
+
+              <div class="item">
+                <span for="xiaomi">xiaomi</span>
+                <input type="checkbox" id="xiaomi" />
+              </div>
+
+              <div class="item">
+                <span for="huawei">huawei</span>
+                <input type="checkbox" id="huawei" />
+              </div>
+            </div>
+          </div>
+
+          <div class="filter_item">
+            <h4>color</h4>
+            <div class="content">
+              <div class="item">
+                <span for="red" class="color" style="background: red"></span>
+                <input type="checkbox" id="red" />
+              </div>
+
+              <div class="item">
+                <span for="blue" class="color" style="background: blue"></span>
+                <input type="checkbox" id="blue" />
+              </div>
+
+              <div class="item">
+                <span
+                  for="black"
+                  class="color"
+                  style="background: black"
+                ></span>
+                <input type="checkbox" id="black" />
+              </div>
+
+              <div class="item">
+                <span
+                  for="orangered"
+                  class="color"
+                  style="background: orangered"
+                ></span>
+                <input type="checkbox" id="orangered" />
+              </div>
+
+              <div class="item">
+                <span
+                  for="green"
+                  class="color"
+                  style="background: green"
+                ></span>
+                <input type="checkbox" id="green" />
+              </div>
+
+              <div class="item">
+                <span
+                  for="yellow"
+                  class="color"
+                  style="background: yellow"
+                ></span>
+                <input type="checkbox" id="yellow" />
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div id="products_dev" class="products_dev"></div>
+      </div>
+
+      <div class="pagination">
+        <span class="btn_page prev"
+          ><i class="fa-solid fa-backward-step"></i
+        ></span>
+        <a href="#"><span class="num_page active">1</span></a>
+        <a href="#"><span class="num_page">2</span></a>
+        <a href="#"><span class="num_page">3</span></a>
+        <span class="btn_page next"
+          ><i class="fa-solid fa-forward-step"></i
+        ></span>
+      </div>
+    </section>
+
+    <div class="back_to_top">
+      <p>back to top</p>
+    </div>
+
+    <footer>
+      <div class="container">
+        <div class="big_row">
+          <a href="index.html"><img src="images/logo-white.png" alt="" /></a>
+
+          <div class="hotline">
+            <i class="fa-solid fa-headset"></i>
+            <div class="text">
+              <h5>hotline free 24/24:</h5>
+              <h6>(+212) 123 456 789</h6>
+            </div>
+          </div>
+
+          <p>
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Ex, vitae!
+          </p>
+        </div>
+
+        <div class="row">
+          <h4>FAQs & Help</h4>
+
+          <div class="links">
+            <a href="#">F.A.Q.'s</a>
+            <a href="#">Ordering Tracking</a>
+            <a href="#">Contacts</a>
+            <a href="#">Events</a>
+            <a href="#">Help Center</a>
+          </div>
+        </div>
+
+        <div class="row">
+          <h4>Shipping & Delivery</h4>
+
+          <div class="links">
+            <a href="#">Delivery Information</a>
+            <a href="#">Discount</a>
+            <a href="#">Payment & Shipping</a>
+            <a href="#">Estimated Delivery Time</a>
+            <a href="#">Shipping Guide</a>
+          </div>
+        </div>
+
+        <div class="row">
+          <h4>Information</h4>
+
+          <div class="links">
+            <a href="#">Popular</a>
+            <a href="#">Our Services</a>
+            <a href="#">Your Account</a>
+            <a href="#">Privacy Policy</a>
+            <a href="#">Terms & Condition</a>
+          </div>
+        </div>
+      </div>
+
+      <div class="bottom_footer">
+        <div class="container">
+          <p>
+            Copyright &copy; <span>Topico.</span> By
+            <a
+              href="https://www.linkedin.com/in/yassine-chmarekh/"
+              target="_blank"
+              >Yassine_ChM</a
+            >
+          </p>
+
+          <div class="payement_img">
+            <img src="images/payment-1.png" alt="" />
+            <img src="images/payment-2.png" alt="" />
+            <img src="images/payment-3.png" alt="" />
+            <img src="images/payment-4.png" alt="" />
+          </div>
+        </div>
+      </div>
+    </footer>
+
+    <!-- link to file js -->
+    <script src="js/main.js"></script>
+    <script src="js/all_products.js"></script>
+  </body>
+</html>
