@@ -116,7 +116,7 @@ function remove_from_wishlist(index) {
   let addToWishlistButtons = document.querySelectorAll(".fa-heart");
   for (let i = 0; i < addToWishlistButtons.length; i++) {
     addToWishlistButtons[i].classList.remove("active");
-    product_wishlit.forEach((product) => {
+    product_wishlit.forEach(product => {
       if (product.id == i) {
         addToWishlistButtons[i].classList.add("active");
       }
