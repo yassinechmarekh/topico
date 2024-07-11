@@ -255,6 +255,7 @@ header .links .login_signup a {
   border-block: 1px solid var(--border-color);
   margin-block: 20px;
   height: 100%;
+  overflow-y: auto;
 }
 
 .cart .item_cart {
@@ -390,6 +391,7 @@ header .links .login_signup a {
   border-block: 1px solid var(--border-color);
   margin-block: 20px;
   height: 100%;
+  overflow-y: auto;
 }
 
 .wishlist .item_wishlist {
